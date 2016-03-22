@@ -1,0 +1,29 @@
+{
+  "name": "generator-gowento",
+  "version": "1.0.0",
+  "description": "Node module template for authoring with ES6+, Babel, AVA and npm scripts",
+  "license": "MIT",
+  "main": "app/index.js",
+  "author": {
+    "name": "Loris Guignard",
+    "email": "loris.guignard@gmail.com",
+    "url": "https://github.com/loris"
+  },
+  "files": [
+    "app"
+  ],
+  "dependencies": {
+    "camelcase": "2.1.1",
+    "generator-babel": "2.0.2",
+    "generator-git-init": "1.1.3",
+    "generator-travis": "1.2.4",
+    "slug": "0.9.1",
+    "yeoman-generator": "0.22.5",
+    "yosay": "1.1.0"
+  },
+  "devDependencies": {
+    "babel-cli": "6.6.5",
+    "babel-core": "6.7.2",
+    "babel-preset-es2015": "6.6.0"
+  }
+}

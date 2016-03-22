@@ -1,0 +1,14 @@
+{
+  "env": {
+    "node": true
+  },
+  "parser": "babel-eslint",
+  "plugins": ["ava"],
+  "extends": ["airbnb/base", "plugin:ava/recommended"],
+  "rules": {
+    "no-console": 0,
+    "max-len": 0,
+    "no-param-reassign": [2, { "props": false }],
+    "id-length": [2, {"min": 2, "properties": "never", "exceptions": ["_", "t"]}] // Allow lodash and ava
+  }
+}

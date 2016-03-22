@@ -1,0 +1,17 @@
+Description:
+  Scaffold out a node module with ES6+, Babel, ava and npm scripts.
+
+Example:
+  yo gowento
+
+  This will create:
+    package.json
+    src/index.js
+    test/index.js
+    LICENSE
+    README.md
+    CHANGELOG.md
+    .eslintrc
+    .gitignore
+    .travis.yml
+    .editorconfig
