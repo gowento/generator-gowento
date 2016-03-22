@@ -3,5 +3,5 @@
  * @return {Type}
  */
 export default function () {
-  return true
+  return true;
 }
