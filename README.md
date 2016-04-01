@@ -1,6 +1,12 @@
 # Gowento Yeoman Generator
 
-Scaffold out a node module with ES6+, Babel, ava and npm scripts.
+Scaffold out a node module with ES6+, Babel, ava and npm scripts. Based on [generator-rise](https://github.com/bucaran/generator-rise)
+
+# Install
+
+```
+npm i -g generator-gowento
+```
 
 # Usage
 > You need [Yeoman](http://yeoman.io/) to run this command.
@@ -40,7 +46,4 @@ yo gowento
 
 # License
 
-MIT © [Loris Guignard][author]
-
-[author]:  https://github.com/loris
-
+MIT © [Gowento][https://www.gowento.com]
