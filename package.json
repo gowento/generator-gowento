@@ -1,14 +1,18 @@
 {
   "name": "generator-gowento",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Node module template for authoring with ES6+, Babel, AVA and npm scripts",
   "license": "MIT",
   "main": "app/index.js",
   "contributors": [
     "Loris Guignard <loris.guignard@gmail.com>"
   ],
-  "files": ["app"],
-  "keywords": ["yeoman-generator"],
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
   "dependencies": {
     "camelcase": "2.1.1",
     "generator-babel": "2.0.2",
