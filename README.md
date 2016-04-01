@@ -1,6 +1,6 @@
 # Gowento Yeoman Generator
 
-Scaffold out a node module with ES6+, Babel, ava and npm scripts. Based on [generator-rise](https://github.com/bucaran/generator-rise)
+Scaffold out a node module with ES6+, Babel, ava, npm scripts and more. Based on [generator-rise](https://github.com/bucaran/generator-rise)
 
 # Install
 
@@ -26,7 +26,7 @@ yo gowento
 → create .eslintignore
 ```
 
-# :beginner: Workflow
+# Workflow
 
 * Add code to `src/index.js` and tests to `test/index.js`.
 
@@ -46,4 +46,4 @@ yo gowento
 
 # License
 
-MIT © [Gowento][https://www.gowento.com]
+MIT © [Gowento](https://www.gowento.com)
