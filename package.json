@@ -7,9 +7,6 @@
   "contributors": [
     "Loris Guignard <loris.guignard@gmail.com>"
   ],
-  "files": [
-    "app"
-  ],
   "keywords": [
     "yeoman-generator"
   ],
