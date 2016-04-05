@@ -4,6 +4,13 @@
   "description": "Node module template for authoring with ES6+, Babel, AVA and npm scripts",
   "license": "MIT",
   "main": "app/index.js",
+  "scripts": {
+    "deploy": "git pull --rebase origin master && git push origin master",
+    "patch": "npm version patch && npm publish",
+    "minor": "npm version minor && npm publish",
+    "major": "npm version major && npm publish",
+    "postpublish": "git push origin master --follow-tags"
+  },
   "contributors": [
     "Loris Guignard <loris.guignard@gmail.com>"
   ],
