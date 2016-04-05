@@ -6,10 +6,6 @@
     "<%= name %> <<%= email %>>"
   ],
   "main": "dist/index.js",
-  "files": [
-    "bin/",
-    "dist/"
-  ],
   "scripts": {
     "clean": "rimraf dist",
     "lint": "eslint src test --cache",
