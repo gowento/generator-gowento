@@ -40,6 +40,7 @@ module.exports = Yeoman.Base.extend({
         this.template("gitignore",     ".gitignore")
         this.template("eslintrc",      ".eslintrc")
         this.template("eslintignore",  ".eslintignore")
+        this.template("npmignore",     ".npmignore")
 
         done()
     }.bind(this))
