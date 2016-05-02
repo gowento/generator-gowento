@@ -4,7 +4,7 @@
   },
   "parser": "babel-eslint",
   "plugins": ["ava"],
-  "extends": ["airbnb/base", "plugin:ava/recommended"],
+  "extends": ["gowento", "plugin:ava/recommended"],
   "rules": {
     "no-console": 0,
     "max-len": 0,

@@ -48,7 +48,7 @@
     "dependency-check": "*",
     "doctoc": "*",
     "eslint": "*",
-    "eslint-config-airbnb": "*",
+    "eslint-config-gowento": "*",
     "eslint-plugin-ava": "*",
     "nyc": "*",
     "rimraf": "*",
