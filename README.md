@@ -16,7 +16,6 @@ yo gowento
 → create package.json
 → create README.md
 → create LICENSE
-→ create CHANGELOG.md
 → create src/index.js
 → create test/index.js
 → create .editorconfig
@@ -37,8 +36,6 @@ yo gowento
 * Run only tests with `npm run test`.
 
 * Check coverage with `npm run coverage`.
-
-* Generate a TOC for the `CHANGELOG` with `npm run toc`
 
 * Deploy to a remote origin with `npm run deploy`.
 
