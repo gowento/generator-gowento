@@ -2,7 +2,6 @@
 
 [![NPM version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
-[![Coveralls Status][coveralls-image]][coveralls-url]
 [![Dependency Status][depstat-image]][depstat-url]
 [![Downloads][download-badge]][npm-url]
 
@@ -31,9 +30,6 @@ MIT © [Gowento](https://www.gowento.com)
 
 [travis-url]: https://travis-ci.org/gowento/<%= moduleName %>
 [travis-image]: https://img.shields.io/travis/gowento/<%= moduleName %>.svg?style=flat-square
-
-[coveralls-url]: https://coveralls.io/r/gowento/<%= moduleName %>
-[coveralls-image]: https://img.shields.io/coveralls/gowento/<%= moduleName %>.svg?style=flat-square
 
 [depstat-url]: https://david-dm.org/gowento/<%= moduleName %>
 [depstat-image]: https://david-dm.org/gowento/<%= moduleName %>.svg?style=flat-square

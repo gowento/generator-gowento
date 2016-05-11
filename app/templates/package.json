@@ -16,8 +16,6 @@
     "postbuild": "npm run test -s",
     "test": "NODE_ENV=test nf run -- PORT=0 ava",
     "coverage": "nyc npm test && nyc report --reporter=html",
-    "coveralls": "npm run coverage -s && coveralls < coverage/lcov.info",
-    "postcoveralls": "rimraf ./coverage",
     "prepublish": "npm run build -s",
     "deploy": "git pull --rebase origin master && git push origin master",
     "patch": "npm version patch && npm publish",
@@ -53,7 +51,6 @@
     "foreman": "*",
     "nyc": "*",
     "rimraf": "*",
-    "watch": "*",
-    "coveralls": "*"
+    "watch": "*"
   }
 }

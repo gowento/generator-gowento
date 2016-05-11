@@ -47,7 +47,7 @@ module.exports = Yeoman.Base.extend({
   },
   writing: function () {
     [
-      { name: 'travis', options: { config: { after_script: ['npm run coveralls'] }}},
+      { name: 'travis' },
       { name: 'babel',  options: { 'skip-install': this.options['skip-install'] }},
       { name: 'git-init' },
     ].forEach(function(generator) {
