@@ -1,6 +1,6 @@
 {
   "name": "generator-gowento",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Node module template for authoring with ES6+, Babel, AVA and npm scripts",
   "license": "MIT",
   "main": "app/index.js",
@@ -11,8 +11,10 @@
     "major": "npm version major && npm publish",
     "postpublish": "git push origin master --follow-tags"
   },
+  "author": "Gowento",
   "contributors": [
-    "Loris Guignard <loris.guignard@gmail.com>"
+    "Loris Guignard <loris@gowento.com>",
+    "Eric Redon <eric@gowento.com>"
   ],
   "keywords": [
     "yeoman-generator"
