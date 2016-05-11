@@ -21,8 +21,7 @@
     "patch": "npm version patch && npm publish",
     "minor": "npm version minor && npm publish",
     "major": "npm version major && npm publish",
-    "postpublish": "git push origin master --follow-tags",
-    "toc": "doctoc --github --title \"# Changelog\" CHANGELOG.md"
+    "postpublish": "git push origin master --follow-tags"
   },
   "ava": {
     "failFast": false,
@@ -44,7 +43,6 @@
     "babel-eslint": "*",
     "babel-preset-es2015": "*",
     "dependency-check": "*",
-    "doctoc": "*",
     "eslint": "*",
     "eslint-config-gowento": "*",
     "eslint-plugin-ava": "*",
