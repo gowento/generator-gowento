@@ -14,17 +14,14 @@
     "prebuild": "npm run check -s && npm run clean -s",
     "build": "babel --optional runtime src -d dist",
     "postbuild": "npm run test -s",
-    "test": "NODE_ENV=test ava",
+    "test": "NODE_ENV=test nf run -- PORT=0 ava",
     "coverage": "nyc npm test && nyc report --reporter=html",
-    "coveralls": "npm run coverage -s && coveralls < coverage/lcov.info",
-    "postcoveralls": "rimraf ./coverage",
     "prepublish": "npm run build -s",
     "deploy": "git pull --rebase origin master && git push origin master",
     "patch": "npm version patch && npm publish",
     "minor": "npm version minor && npm publish",
     "major": "npm version major && npm publish",
-    "postpublish": "git push origin master --follow-tags",
-    "toc": "doctoc --github --title \"# Changelog\" CHANGELOG.md"
+    "postpublish": "git push origin master --follow-tags"
   },
   "ava": {
     "failFast": false,
@@ -46,13 +43,12 @@
     "babel-eslint": "*",
     "babel-preset-es2015": "*",
     "dependency-check": "*",
-    "doctoc": "*",
     "eslint": "*",
-    "eslint-config-airbnb": "*",
+    "eslint-config-gowento": "*",
     "eslint-plugin-ava": "*",
+    "foreman": "*",
     "nyc": "*",
     "rimraf": "*",
-    "watch": "*",
-    "coveralls": "*"
+    "watch": "*"
   }
 }
