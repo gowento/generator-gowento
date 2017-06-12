@@ -13,5 +13,4 @@ Example:
     CHANGELOG.md
     .eslintrc
     .gitignore
-    .travis.yml
     .editorconfig

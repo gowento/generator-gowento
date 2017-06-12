@@ -1,60 +1,54 @@
-const Yeoman = require("yeoman-generator")
-const yosay = require("yosay")
-const slug = require("slug")
-const camel = require("camelcase")
+const Generator = require('yeoman-generator');
+const yosay = require('yosay');
+const slug = require('slug');
+const camel = require('camelcase');
+const path = require('path');
 
-module.exports = Yeoman.Base.extend({
-  init: function () {
-    const done = this.async()
+module.exports = class extends Generator {
+  init() {
+    this.log(yosay('☭ Gowento Yeoman Generator.'));
 
-    this.log(yosay("☭ Gowento Yeoman Generator."))
-    this.prompt([
+    return this.prompt([
       {
-        name: "moduleName",
-        message: "What is the module name?",
-        filter: function (s) { return slug(s) },
-        default: require("path").basename(process.cwd()).replace(/\s/g, "-")
+        name: 'moduleName',
+        message: 'What is the module name?',
+        filter: slug,
+        default: path.basename(process.cwd()).replace(/\s/g, '-'),
       },
       {
-        name: "moduleDesc",
-        message: "What is the module description?",
-        default: function (props) { return props.name }
-      }
-    ],
-      function (props) {
-        this.moduleName = props.moduleName
-        this.moduleDesc = props.moduleDesc
-        this.camelModuleName = camel(props.moduleName)
+        name: 'moduleDesc',
+        message: 'What is the module description?',
+        default: props => props.name,
+      },
+    ])
+    .then(props => {
+      const tpl = {
+        moduleName: props.moduleName,
+        moduleDesc: props.moduleDesc,
+        camelModuleName: camel(props.moduleName),
+        name: this.user.git.name(),
+        email: this.user.git.email(),
+      };
 
-        this.name = this.user.git.name()
-        this.email = this.user.git.email()
 
-        this.template("README.md")
-        this.template("package.json")
-        this.template("LICENSE")
-        this.template("CHANGELOG.md")
-        this.template("index.js",      "src/index.js")
-        this.template("test.js",       "test/index.js")
-        this.template("babelrc",       ".babelrc")
-        this.template("editorconfig",  ".editorconfig")
-        this.template("gitignore",     ".gitignore")
-        this.template("eslintrc",      ".eslintrc")
-        this.template("eslintignore",  ".eslintignore")
-        this.template("npmignore",     ".npmignore")
+      this.fs.copyTpl(`${this.templatePath()}/**`, this.destinationPath(), tpl);
 
-        done()
-    }.bind(this))
-  },
-  writing: function () {
-    [
-      { name: 'travis' },
-      { name: 'babel',  options: { 'skip-install': this.options['skip-install'] }},
-      { name: 'git-init' },
-    ].forEach(function(generator) {
-      this.composeWith(generator.name, { options: generator.options || {} }, {
-        local: require.resolve('generator-' + generator.name + '/generators/app')
-      });
-    }.bind(this))
-  },
-  install: function () { this.installDependencies({ bower: false }) }
-})
+      const mv = (from, to) => this.fs.move(this.destinationPath(from), this.destinationPath(to));
+      mv('index.js', 'src/index.js');
+      mv('test.js', 'test/index.js');
+      mv('babelrc', '.babelrc');
+      mv('gitignore', '.gitignore');
+      mv('eslintrc', '.eslintrc');
+      mv('eslintignore', '.eslintignore');
+      mv('npmignore', '.npmignore');
+    });
+  }
+
+  git() {
+    this.spawnCommandSync('git', ['init']);
+  }
+
+  install() {
+    this.installDependencies({ bower: false, npm: false, yarn: true });
+  }
+};

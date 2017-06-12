@@ -20,7 +20,6 @@ yo gowento
 → create test/index.js
 → create .editorconfig
 → create .gitignore
-→ create .travis.yml
 → create .eslintrc
 → create .eslintignore
 ```
@@ -31,11 +30,7 @@ yo gowento
 
 * Lint, build and test a project with `npm run build`.
 
-* Build and watch changes in `src/` with `npm run watch`
-
 * Run only tests with `npm run test`.
-
-* Check coverage with `npm run coverage`.
 
 * Deploy to a remote origin with `npm run deploy`.
 

@@ -2,6 +2,7 @@
   "name": "<%= moduleName %>",
   "version": "1.0.0",
   "description": "<%= moduleDesc %>",
+  "author": "Gowento <hackers@gowento.com>",
   "contributors": [
     "<%= name %> <<%= email %>>"
   ],
@@ -9,18 +10,15 @@
   "scripts": {
     "clean": "rimraf dist",
     "lint": "eslint src test --cache",
-    "check": "npm run lint -s && dependency-check package.json --entry src",
-    "watch": "watch 'npm run build' src test",
-    "prebuild": "npm run check -s && npm run clean -s",
+    "prebuild": "yarn run clean -s",
     "build": "babel --optional runtime src -d dist",
-    "postbuild": "npm run test -s",
-    "test": "NODE_ENV=test nf run -- PORT=0 ava",
-    "coverage": "nyc npm test && nyc report --reporter=html",
-    "prepublish": "npm run build -s",
+    "postbuild": "yarn run test -s",
+    "test": "ava",
+    "prepublish": "yarn run build -s",
     "deploy": "git pull --rebase origin master && git push origin master",
-    "patch": "npm version patch && npm publish",
-    "minor": "npm version minor && npm publish",
-    "major": "npm version major && npm publish",
+    "patch": "yarn version patch && yarn publish",
+    "minor": "yarn version minor && yarn publish",
+    "major": "yarn version major && yarn publish",
     "postpublish": "git push origin master --follow-tags"
   },
   "ava": {
@@ -39,16 +37,10 @@
   "devDependencies": {
     "ava": "*",
     "babel-cli": "*",
-    "babel-core": "*",
-    "babel-eslint": "*",
-    "babel-preset-es2015": "*",
-    "dependency-check": "*",
-    "eslint": "*",
+    "eslint": "^3",
     "eslint-config-gowento": "*",
-    "eslint-plugin-ava": "*",
-    "foreman": "*",
-    "nyc": "*",
     "rimraf": "*",
-    "watch": "*"
+    "babel-plugin-transform-object-rest-spread": "*",
+    "babel-preset-env": "*"
   }
 }

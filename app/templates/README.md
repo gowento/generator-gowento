@@ -1,7 +1,6 @@
 # <%= moduleName %>
 
 [![NPM version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
 [![Dependency Status][depstat-image]][depstat-url]
 [![Downloads][download-badge]][npm-url]
 
@@ -27,9 +26,6 @@ MIT © [Gowento](https://www.gowento.com)
 
 [npm-url]: https://npmjs.org/package/<%= moduleName %>
 [npm-image]: https://img.shields.io/npm/v/<%= moduleName %>.svg?style=flat-square
-
-[travis-url]: https://travis-ci.org/gowento/<%= moduleName %>
-[travis-image]: https://img.shields.io/travis/gowento/<%= moduleName %>.svg?style=flat-square
 
 [depstat-url]: https://david-dm.org/gowento/<%= moduleName %>
 [depstat-image]: https://david-dm.org/gowento/<%= moduleName %>.svg?style=flat-square
