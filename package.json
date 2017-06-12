@@ -1,14 +1,14 @@
 {
   "name": "generator-gowento",
-  "version": "1.4.0",
-  "description": "Node module template for authoring with ES6+, Babel, AVA and npm scripts",
+  "version": "2.0.0",
+  "description": "Node module template for authoring with ES6+, Babel, AVA and npm/yarn scripts",
   "license": "MIT",
   "main": "app/index.js",
   "scripts": {
     "deploy": "git pull --rebase origin master && git push origin master",
-    "patch": "npm version patch && npm publish",
-    "minor": "npm version minor && npm publish",
-    "major": "npm version major && npm publish",
+    "patch": "yarn version patch && yarn publish",
+    "minor": "yarn version minor && yarn publish",
+    "major": "yarn version major && yarn publish",
     "postpublish": "git push origin master --follow-tags"
   },
   "author": "Gowento",
