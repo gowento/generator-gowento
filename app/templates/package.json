@@ -16,9 +16,6 @@
     "test": "ava",
     "prepublish": "yarn run build -s",
     "deploy": "git pull --rebase origin master && git push origin master",
-    "patch": "yarn version patch && yarn publish",
-    "minor": "yarn version minor && yarn publish",
-    "major": "yarn version major && yarn publish",
     "postpublish": "git push origin master --follow-tags"
   },
   "ava": {
